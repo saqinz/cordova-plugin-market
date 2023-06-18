@@ -69,12 +69,16 @@ public class Market extends CordovaPlugin
      * Open the appId details on Google Play .
      *
      * @param appId
+     *            Application Id on Amazon Play Store.
+     *            E.g.: amzn://apps/android?asin=earth.com
      *            Application Id on Google Play.
-     *            E.g.: com.google.earth
+     *            E.g.: market://details?id=earth.com
      */
     private void openGooglePlay(String appId) throws android.content.ActivityNotFoundException {
         Context context = this.cordova.getActivity().getApplicationContext();
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appId));
+/*        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appId));*/
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse( appId));
+        
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
@@ -83,12 +87,15 @@ public class Market extends CordovaPlugin
      * search the details on Google Play .
      *
      * @param searchKeyword
+     *            Application Id on Amazon Play Store.
+     *            E.g.: amzn://apps/android?s=earth
      *            Application Id on Google Play.
-     *            E.g.: earth
+     *            E.g.: market://search?q=earth
      */
     private void searchGooglePlay(String key) throws android.content.ActivityNotFoundException {
         Context context = this.cordova.getActivity().getApplicationContext();
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=" + key));
+/*        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=" + key));*/
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse( key));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
