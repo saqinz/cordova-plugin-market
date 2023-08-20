@@ -4,7 +4,20 @@ cordova-plugin-market
 Cordova (PhoneGap) 3.0+ plugin to open an application on native Marketplace app, aka Play Store for Android or App Store for iOS.
 Currently this plugin is compatible only with Android and iOS. Feel free to add support for the platform you need!
 
+Changes added to the fork from v1.2 of the original plug-in.
  ++ Support added for the Amazon Appstore, Galaxy Appstore.
+
+Examples:
+for Amazon App Store
+       cordova.plugins.market.open('amzn://apps/android?asin=B0BJ9WX4LX');
+
+for Android App Store
+       cordova.plugins.market.open('market://details?id=co.nz.enze.wotile')
+ 
+for Samsung Galxy Store 
+       cordova.plugins.market.open('samsungapps://store/apps/details?id=co.nz.enze.wotile')
+
+and so on for other app stores such as Huawei etc
  
 
 # Installation
@@ -61,6 +74,7 @@ You can also add a success and failure callback like this:
 
 
 # Release Notes
+
 
 Version 1.2
 
