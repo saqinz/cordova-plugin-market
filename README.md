@@ -8,16 +8,20 @@ Currently this plugin is compatible only with Android and iOS. Feel free to add 
 ++ Support added for the Amazon Appstore, Galaxy Appstore.
 
 Examples:
-for Amazon App Store
-       cordova.plugins.market.open('amzn://apps/android?asin=B0BJ9WX4LX');
 
-for Android App Store
-       cordova.plugins.market.open('market://details?id=co.nz.enze.wotile')
+* for Amazon App Store:
+  
+`cordova.plugins.market.open('amzn://apps/android?asin=B0BJ9WX4LX')`
+
+* for Android App Store:
+  
+`cordova.plugins.market.open('market://details?id=co.nz.enze.wotile')`
  
-for Samsung Galxy Store 
-       cordova.plugins.market.open('samsungapps://store/apps/details?id=co.nz.enze.wotile')
+* for Samsung Galxy Store:
+ 
+  `cordova.plugins.market.open('samsungapps://store/apps/details?id=co.nz.enze.wotile')`
 
-and so on for other app stores such as Huawei etc
+* and so on for other app stores such as Huawei etc
  
 
 # Installation
